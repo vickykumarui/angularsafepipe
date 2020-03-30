@@ -35,7 +35,9 @@ rd .git /S/Q
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin git@github.com:vickykumarui/angularsafepipe.git
+git remote add origin git@github.com:vickykumarui/angularsafepipe.git 
+or below one is preffered
+git remote add origin https://github.com/vickykumarui/angularsafepipe.git
 git push -u origin master
                 
 …or push an existing repository from the command line
@@ -43,4 +45,20 @@ git remote add origin git@github.com:vickykumarui/angularsafepipe.git
 git push -u origin master
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+########################## Deploying angular application to github
+# reference - https://angular.io/guide/deployment
+
+# step 1 install angular-cli-ghpages
+npm install -g angular-cli-ghpages
+
+# step 2 do prodbuild and deployment and 
+#give base url as --base-href "https://<<your github userid>>.github.io/<<repository name>>"
+
+ng build --prod --base-href "https://vickykumarui.github.io/angularsafepipe"
+
+
+
+
 
